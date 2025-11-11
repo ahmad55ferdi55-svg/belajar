@@ -3,25 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suhu Converter</title>
+    <title>m.zainudin.zidan Daily Tools</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>🌡️ Konverter Suhu</h1>
-        <p>Masukkan nilai di salah satu kolom untuk konversi otomatis.</p>
-
-        <div class="converter-box">
-            <label for="celsius">Celsius (°C):</label>
-            <input type="number" id="celsius" oninput="convertTemp('C')">
+        <h1>🛠️ m.zainudin.zidan Daily Tools</h1>
+        <p class="subtitle">Konverter Unit Harian</p>
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('temp')">Suhu</button>
+            <button class="tab-button" onclick="showTab('weight')">Berat</button>
+            <button class="tab-button" onclick="showTab('distance')">Jarak</button>
         </div>
 
-        <div class="converter-box">
-            <label for="fahrenheit">Fahrenheit (°F):</label>
-            <input type="number" id="fahrenheit" oninput="convertTemp('F')">
+        <div id="temp" class="tab-content active">
+            <h3>Konversi Suhu (°C ↔ °F)</h3>
+            <div class="converter-box">
+                <label for="celsius">Celsius (°C):</label>
+                <input type="number" id="celsius" oninput="convertTemp('C')">
+            </div>
+            <div class="converter-box">
+                <label for="fahrenheit">Fahrenheit (°F):</label>
+                <input type="number" id="fahrenheit" oninput="convertTemp('F')">
+            </div>
+        </div>
+
+        <div id="weight" class="tab-content">
+            <h3>Konversi Berat (Kg ↔ Lbs)</h3>
+            <div class="converter-box">
+                <label for="kilogram">Kilogram (Kg):</label>
+                <input type="number" id="kilogram" oninput="convertWeight('KG')">
+            </div>
+            <div class="converter-box">
+                <label for="pound">Pound (Lbs):</label>
+                <input type="number" id="pound" oninput="convertWeight('LBS')">
+            </div>
+        </div>
+
+        <div id="distance" class="tab-content">
+            <h3>Konversi Jarak (Km ↔ Mil)</h3>
+            <div class="converter-box">
+                <label for="kilometer">Kilometer (Km):</label>
+                <input type="number" id="kilometer" oninput="convertDistance('KM')">
+            </div>
+            <div class="converter-box">
+                <label for="mile">Mil (Miles):</label>
+                <input type="number" id="mile" oninput="convertDistance('MILE')">
+            </div>
         </div>
         
-        <button onclick="clearInputs()">Reset</button>
+        <button onclick="clearAllInputs()">Reset Semua</button>
     </div>
 
     <script src="script.js"></script>
