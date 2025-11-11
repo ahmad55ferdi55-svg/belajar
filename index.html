@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>m.zainudin.zidan Daily Tools</title>
+    <title>Zidan Daily Tools</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>🛠️ m.zainudin.zidan Daily Tools</h1>
-        <p class="subtitle">Konverter Unit Harian</p>
+        <p class="subtitle">Konverter Unit Harian Lengkap</p>
         
         <div class="tabs">
             <button class="tab-button active" onclick="showTab('temp')">Suhu</button>
@@ -18,55 +18,64 @@
         </div>
 
         <div id="temp" class="tab-content active">
-    <h3>Konversi Suhu (Lengkap)</h3>
-    <div class="converter-box">
-        <label for="celsius">Celsius (°C):</label>
-        <input type="number" id="celsius" oninput="convertTemp('C')">
-    </div>
-    <div class="converter-box">
-        <label for="fahrenheit">Fahrenheit (°F):</label>
-        <input type="number" id="fahrenheit" oninput="convertTemp('F')">
-    </div>
-    <div class="converter-box">
-        <label for="reamur">Reamur (°R):</label>
-        <input type="number" id="reamur" oninput="convertTemp('R')">
-    </div>
-    <div class="converter-box">
-        <label for="kelvin">Kelvin (K):</label>
-        <input type="number" id="kelvin" oninput="convertTemp('K')">
-    </div>
-</div>
+            <h3>Konversi Suhu (°C, °F, °R, K)</h3>
+            <div class="converter-box">
+                <label for="celsius">Celsius (°C):</label>
+                <input type="number" id="celsius" oninput="convertTemp('C')">
+            </div>
+            <div class="converter-box">
+                <label for="fahrenheit">Fahrenheit (°F):</label>
+                <input type="number" id="fahrenheit" oninput="convertTemp('F')">
+            </div>
+            <div class="converter-box">
+                <label for="reamur">Reamur (°R):</label>
+                <input type="number" id="reamur" oninput="convertTemp('R')">
+            </div>
+            <div class="converter-box">
+                <label for="kelvin">Kelvin (K):</label>
+                <input type="number" id="kelvin" oninput="convertTemp('K')">
+            </div>
+        </div>
+
         <div id="weight" class="tab-content">
-    <h3>Konversi Berat (Lengkap)</h3>
-    <div class="converter-box">
-        <label for="kilogram">Kilogram (Kg):</label>
-        <input type="number" id="kilogram" oninput="convertWeight('KG')">
-    </div>
-    <div class="converter-box">
-        <label for="pound">Pound (Lbs):</label>
-        <input type="number" id="pound" oninput="convertWeight('LBS')">
-    </div>
-    <div class="converter-box">
-        <label for="gram">Gram (G):</label>
-        <input type="number" id="gram" oninput="convertWeight('G')">
-    </div>
-</div>
+            <h3>Konversi Berat (Kg, Lbs, G)</h3>
+            <div class="converter-box">
+                <label for="kilogram">Kilogram (Kg):</label>
+                <input type="number" id="kilogram" oninput="convertWeight('KG')">
+            </div>
+            <div class="converter-box">
+                <label for="pound">Pound (Lbs):</label>
+                <input type="number" id="pound" oninput="convertWeight('LBS')">
+            </div>
+            <div class="converter-box">
+                <label for="gram">Gram (G):</label>
+                <input type="number" id="gram" oninput="convertWeight('G')">
+            </div>
+        </div>
+
         <div id="distance" class="tab-content">
-    <h3>Konversi Jarak (Lengkap)</h3>
-    <div class="converter-box">
-        <label for="kilometer">Kilometer (Km):</label>
-        <input type="number" id="kilometer" oninput="convertDistance('KM')">
+            <h3>Konversi Jarak (Km, Mil, M, Cm)</h3>
+            <div class="converter-box">
+                <label for="kilometer">Kilometer (Km):</label>
+                <input type="number" id="kilometer" oninput="convertDistance('KM')">
+            </div>
+            <div class="converter-box">
+                <label for="mile">Mil (Miles):</label>
+                <input type="number" id="mile" oninput="convertDistance('MILE')">
+            </div>
+            <div class="converter-box">
+                <label for="meter">Meter (M):</label>
+                <input type="number" id="meter" oninput="convertDistance('M')">
+            </div>
+            <div class="converter-box">
+                <label for="centimeter">Centimeter (Cm):</label>
+                <input type="number" id="centimeter" oninput="convertDistance('CM')">
+            </div>
+        </div>
+        
+        <button onclick="clearAllInputs()">Reset Semua</button>
     </div>
-    <div class="converter-box">
-        <label for="mile">Mil (Miles):</label>
-        <input type="number" id="mile" oninput="convertDistance('MILE')">
-    </div>
-    <div class="converter-box">
-        <label for="meter">Meter (M):</label>
-        <input type="number" id="meter" oninput="convertDistance('M')">
-    </div>
-    <div class="converter-box">
-        <label for="centimeter">Centimeter (Cm):</label>
-        <input type="number" id="centimeter" oninput="convertDistance('CM')">
-    </div>
-</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
